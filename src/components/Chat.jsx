@@ -12,7 +12,7 @@ export function Chat({ conversationId }) {
         try {
           const response = await fetch(`http://ec2-3-88-199-233.compute-1.amazonaws.com:8000/api/v1/chatbot/conversations/${conversationId.id}/messages/`, {
             headers: {
-                Authorization:'Basic YWRtaW46YWRtaW4=',
+                Authorization:'Basic c3VwZXJVc2VyNTY3ODpmdHZydE1uN1U3UmVUZGVr',
             },
           });
           const data = await response.json();
@@ -48,7 +48,7 @@ export function Chat({ conversationId }) {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    Authorization: 'Basic YWRtaW46YWRtaW4=',
+                    Authorization: 'Basic c3VwZXJVc2VyNTY3ODpmdHZydE1uN1U3UmVUZGVr',
                 },
                 body: JSON.stringify({
                     conversation: conversationId.id,
