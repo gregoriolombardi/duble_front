@@ -13,6 +13,7 @@ function App() {
       <Sidebar setActiveChat={setActiveChat} />
       {activeChat && <Chat conversationId={activeChat} />}
       {/* <Chat chat={activeChat} /> */}
+      {console.log("TESTE !!!!!")}
     </div>
   )
 }
