@@ -5,9 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
-      "./runtimeConfig": "./runtimeConfig.browser",
-    },
-  },
+      alias: [
+      {
+        find: './runtimeConfig',
+        replacement: './runtimeConfig.browser', // ensures browser compatible version of AWS JS SDK is used
+      },
+    ]
+  }
 })
